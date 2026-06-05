@@ -1,0 +1,10 @@
+container_digests:
+  - wave.seqera.io/wt/c63c9104738d/nextflow/bash:latest
+launched_at: '2026-06-05T13:55:49.720Z'
+launched_by: CiQwOGE4Njg0Yi1kYjg4LTRiNzMtOTBhOS0zY2QxNjYxZjU0NjYSBWxvY2Fs
+output_dir: null
+outputs: []
+params_hash: d8de476657302a06e72b633660295ae6bbb0b404cb1cd0a459302d3001842cb9
+pipeline:
+  repo: https://github.com/nextflow-io/hello
+run_id: f511cd40-6678-4abd-b887-2939c7a2c5f5
