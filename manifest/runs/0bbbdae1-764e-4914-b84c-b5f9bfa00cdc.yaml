@@ -1,0 +1,25 @@
+container_digests:
+  - wave.seqera.io/wt/c55c45a85632/nextflow/bash:latest
+launched_at: '2026-06-05T14:49:50.809Z'
+launched_by: CiQwOGE4Njg0Yi1kYjg4LTRiNzMtOTBhOS0zY2QxNjYxZjU0NjYSBWxvY2Fs
+output_dir: s3://sequencinglab/output-test
+outputs:
+  - name: greetings/
+    size: 0
+    uri: s3://sequencinglab/output-test/greetings/
+  - name: greetings/Bonjour.txt
+    size: 15
+    uri: s3://sequencinglab/output-test/greetings/Bonjour.txt
+  - name: greetings/Ciao.txt
+    size: 12
+    uri: s3://sequencinglab/output-test/greetings/Ciao.txt
+  - name: greetings/Hello.txt
+    size: 13
+    uri: s3://sequencinglab/output-test/greetings/Hello.txt
+  - name: greetings/Hola.txt
+    size: 12
+    uri: s3://sequencinglab/output-test/greetings/Hola.txt
+params_hash: 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a
+pipeline:
+  repo: https://github.com/reubenduncan/nf-hello
+run_id: 0bbbdae1-764e-4914-b84c-b5f9bfa00cdc
