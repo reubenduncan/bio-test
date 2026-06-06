@@ -4,50 +4,110 @@
    "cell_type": "code",
    "execution_count": 1,
    "id": "4f27eff5-c398-415e-bd88-ee2f2c8fd999",
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "3"
-      ]
-     },
-     "execution_count": 1,
-     "metadata": {},
-     "output_type": "execute_result"
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-06-06T11:22:31.972610Z",
+     "iopub.status.busy": "2026-06-06T11:22:31.972383Z",
+     "iopub.status.idle": "2026-06-06T11:22:32.139465Z",
+     "shell.execute_reply": "2026-06-06T11:22:32.138261Z",
+     "shell.execute_reply.started": "2026-06-06T11:22:31.972591Z"
     }
-   ],
+   },
+   "outputs": [],
    "source": [
-    "1+2"
+    "import s3fs"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": 2,
    "id": "548bedda-3b0e-4828-b6fc-0b3b78461b04",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-06-04T15:47:44.505484Z",
-     "iopub.status.busy": "2026-06-04T15:47:44.505242Z",
-     "iopub.status.idle": "2026-06-04T15:47:44.513808Z",
-     "shell.execute_reply": "2026-06-04T15:47:44.512923Z",
-     "shell.execute_reply.started": "2026-06-04T15:47:44.505467Z"
+     "iopub.execute_input": "2026-06-06T11:22:46.296524Z",
+     "iopub.status.busy": "2026-06-06T11:22:46.296289Z",
+     "iopub.status.idle": "2026-06-06T11:22:46.566870Z",
+     "shell.execute_reply": "2026-06-06T11:22:46.564316Z",
+     "shell.execute_reply.started": "2026-06-06T11:22:46.296512Z"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['sequencinglab/SD25-fastq-test', 'sequencinglab/SD25-test-output', 'sequencinglab/Sand_Dam_2017', 'sequencinglab/Sand_Dam_2025', 'sequencinglab/Thames_KPS_Test_Output', 'sequencinglab/Thames_Kempton_Pilot_SSF_2021', 'sequencinglab/alignment_output', 'sequencinglab/annotation_s_refs', 'sequencinglab/annotation_ysf_bins', 'sequencinglab/multialign_output', 'sequencinglab/outDir', 'sequencinglab/output-test', 'sequencinglab/output_ysf_1', 'sequencinglab/signalp', 'sequencinglab/test_results', 'sequencinglab/work']\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(s3fs.S3FileSystem().ls('sequencinglab'))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "334b098c-3cca-4e55-89c3-806ee47456b8",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-06-06T11:23:40.878700Z",
+     "iopub.status.busy": "2026-06-06T11:23:40.878560Z",
+     "iopub.status.idle": "2026-06-06T11:23:40.884261Z",
+     "shell.execute_reply": "2026-06-06T11:23:40.882357Z",
+     "shell.execute_reply.started": "2026-06-06T11:23:40.878691Z"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "import fsspec\n",
+    "fs = fsspec.filesystem('s3')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "6e7e6aa8-2c68-467f-bee4-d96b44caa87c",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-06-06T11:24:10.533438Z",
+     "iopub.status.busy": "2026-06-06T11:24:10.533279Z",
+     "iopub.status.idle": "2026-06-06T11:24:10.716612Z",
+     "shell.execute_reply": "2026-06-06T11:24:10.714079Z",
+     "shell.execute_reply.started": "2026-06-06T11:24:10.533428Z"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "f = fs.open(\"s3://sequencinglab/outDir/greetings/Hello.txt\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "3ed133c9-8716-4088-8547-1e9851b5552a",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-06-06T11:26:00.633670Z",
+     "iopub.status.busy": "2026-06-06T11:26:00.633522Z",
+     "iopub.status.idle": "2026-06-06T11:26:00.801513Z",
+     "shell.execute_reply": "2026-06-06T11:26:00.800359Z",
+     "shell.execute_reply.started": "2026-06-06T11:26:00.633660Z"
     }
    },
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "4"
+       "b'Hello world!\\n'"
       ]
      },
-     "execution_count": 1,
+     "execution_count": 7,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
-    "1+3"
+    "f.readline()"
    ]
   }
  ],
