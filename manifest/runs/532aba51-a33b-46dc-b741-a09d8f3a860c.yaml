@@ -1,0 +1,11 @@
+container_digests:
+  - >-
+    wave.seqera.io/wt/e113092a916f/nextflow/bash@sha256:ead5343ec3b809fd783fb05186a5fc3cd2aa975fa366f4c06a55aa60c1c097e9
+launched_at: '2026-06-22T20:53:56.548Z'
+launched_by: local
+output_dir: null
+outputs: []
+params_hash: 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a
+pipeline:
+  repo: reubenduncan/nf-hello
+run_id: 532aba51-a33b-46dc-b741-a09d8f3a860c
