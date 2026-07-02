@@ -1,0 +1,11 @@
+container_digests:
+  - >-
+    wave.seqera.io/wt/31af1370b331/nextflow/bash@sha256:ead5343ec3b809fd783fb05186a5fc3cd2aa975fa366f4c06a55aa60c1c097e9
+launched_at: '2026-07-02T14:41:44.753Z'
+launched_by: CiQwOGE4Njg0Yi1kYjg4LTRiNzMtOTBhOS0zY2QxNjYxZjU0NjYSBWxvY2Fs
+output_dir: null
+outputs: []
+params_hash: 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a
+pipeline:
+  repo: https://github.com/reubenduncan/nf-hello
+run_id: c9ca2d70-a7b0-4d4f-9a65-fdd57a09d1ee
