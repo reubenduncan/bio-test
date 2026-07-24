@@ -1,0 +1,1 @@
+{"input_format":"biom","output_dir":"${projectDir}/results","min_library_size":5000,"taxon_rank":"Phylum","label":"analysis","prevalence_min":0.85,"what_detection":"absolute","detection_steps":20,"detection_range_min":-1,"detection_range_max":-1,"merge_parquet":false}
