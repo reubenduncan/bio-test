@@ -1,0 +1,1 @@
+{"input_format":"biom","min_library_size":5000,"taxon_rank":"Feature","ordination_method":"pcoa","distance_metric":"bray","ellipse_kind":"se","label":"analysis","permanova_permutations":999,"p_adjust_method":"BH","merge_parquet":false}
