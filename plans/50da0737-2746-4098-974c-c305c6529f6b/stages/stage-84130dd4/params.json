@@ -1,0 +1,1 @@
+{"input_format":"biom","output_dir":"${projectDir}/results","min_library_size":5000,"taxon_rank":"Genus","label":"comparison","da_method":"deseq2","sig":0.05,"fold":2,"p_adjust_method":"BH","deseq2_fit_type":"parametric","deseq2_size_factor_method":"poscounts","deseq2_use_qpcr":false,"deseq2_qpcr_column":"qPCR_16S_per_ml","merge_parquet":false}
